@@ -1,0 +1,29 @@
+<table class="table table-strip">
+  <tr class="bg-dark text-white">
+      <td> ID</td>
+      <td> User Name </td>
+      <td> Full Name </td>
+      <td> Email </td>
+      <td> Address </td>
+      <td> Phone Number </td>
+       <td> Action </td>
+  </tr>
+  
+  <tr *ngFor="let user of this.users">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.fullName}}</td>
+      <td>{{user.password}}</td>
+      <td>{{user.address}}</td>
+       <td>{{user.phonenum}}</td>
+      <td><a href="javascript:void(0);" class="btn btn-success"  (click)="edit(user)">Edit</a> / 
+      <a href="javascript:void(0);" class="btn btn-danger"
+      (click)="deleteUser(user)"
+      >Delete</a></td>
+  </tr>
+  <tr>
+       <td>&nbsp;</td>
+        <td><a [routerLink]="['/add-tenant']" class="btn btn-success btn-lg">Add User</a></td>
+  </tr>
+  </table>
+  

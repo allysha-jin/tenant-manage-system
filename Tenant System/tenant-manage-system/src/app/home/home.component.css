@@ -1,0 +1,39 @@
+/* .background{
+  background-image: url(C:\Users\Acer\OneDrive\Desktop\projectFYP\tenantsystem\src\app\pexels-naim-benjelloun-2029722.jpg);
+    width:100%;
+    height:100; 
+    background-size:cover;
+    background-position:90% 90%;
+    background-attachment: fixed;
+} */
+
+.content{
+    display: block; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin: 15em auto;
+    text-shadow: rgb(148, 146, 146) 10px 5px 10px;
+
+    
+}
+
+.container{
+  background-color:rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  width:700px;
+  height: 170px;
+  margin: 0 auto;
+  
+}
+
+h1{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+a{
+  font-size: medium;
+}
+
+

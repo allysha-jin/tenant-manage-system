@@ -1,0 +1,73 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+   <mat-card class="box">
+     <mat-card-header>
+       <mat-card-title>Add Tenant</mat-card-title>
+     </mat-card-header>
+     <br>
+
+     <form class="example-form" [formGroup]="addForm" (ngSubmit)="onSubmit()" novalidate>
+       <mat-card-content>
+
+         <mat-form-field class="form-group" appearance="fill">
+           <mat-label>Full Name</mat-label>
+           <input matInput name="fullName" class="form-control" formControlName="fullName">
+           <!-- <mat-error class="form-control-feedback" *ngIf="emp.fullName.errors && (emp.fullName.dirty || emp.fullName.touched)" style="color:red">
+               <p *ngIf="emp.fullName.errors.required">Name is required</p>
+               <p *ngIf="emp.fullName.errors.upper">Character must be of uppercase</p>
+               <p *ngIf="emp.fullName.errors.pattern">Name cannot contain special charaters (@, _, etc.,) </p>
+           </mat-error> -->
+       </mat-form-field>
+
+         <mat-form-field class="form-group" appearance="fill">
+           <mat-label>Username</mat-label>
+           <input matInput formControlName="username" name="username" class="form-control">
+         </mat-form-field>
+ 
+       <mat-form-field class="form-group" appearance="fill">
+           <mat-label>Password</mat-label>
+           <input matInput [type]="hide ? 'password' : 'text'" name="password" class="form-control" formControlName="password" >
+           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+             <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+           </button>
+         </mat-form-field>
+
+         <mat-form-field class="form-group" appearance="fill">
+             <mat-label>Email</mat-label>
+             <input matInput name="email" class="form-control" formControlName="email">
+             <mat-error>Email is required</mat-error>
+         </mat-form-field>
+
+         <mat-form-field class="form-group" appearance="fill">
+           <mat-label>Phone Number</mat-label>
+           <input matInput name="phonenum" class="form-control" formControlName="phonenum">
+           <mat-error>Phone number is required</mat-error>
+       </mat-form-field>
+
+       <mat-form-field class="form-group" appearance="fill">
+         <mat-label>Home Address</mat-label>
+           <textarea matInput name="address" rows="3" cols="30" placeholder="address" name="address" class="form-control" formControlName="address"></textarea>
+         </mat-form-field>
+         
+<!-- <mat-radio-group class="form-group" appearance="fill">
+           <mat-radio-button name="gender" value="male"> Male </mat-radio-button> &nbsp;
+           <mat-radio-button name="gender" value="female"> Female </mat-radio-button>
+         </mat-radio-group> -->
+x
+       </mat-card-content>
+       <button mat-stroked-button color="primary" class="btn-block" (click)="onSubmit()">Submit</button>
+     </form>
+     <!-- <div class="signup">
+       <a routerLink="">Forgot Password</a>
+       <br>
+       <a routerLink="/signup_tenant">Not a Sign-Up yet? Sign-Up here!</a>
+     </div> -->
+   </mat-card>
+ 
+ </div>
+ 
+ <!-- <pre>
+ {{loginForm.value | json }}
+ </pre> -->
+

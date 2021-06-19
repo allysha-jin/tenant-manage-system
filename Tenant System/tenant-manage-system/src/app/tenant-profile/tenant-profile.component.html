@@ -1,0 +1,130 @@
+<div class="container" >
+  <div fxLayout="row" fxFlex="100" fxLayoutGap="25px" fxLayoutAlign="center start">
+    <div fxFlex="100" fxLayout.gt-md="row" fxLayout="column" fxLayoutGap="25px" fxLayoutAlign="center center">
+      <mat-card fxLayout="column" fxLayoutGap="25px" fxLayoutAlign="center start">
+
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image mat-elevation-z5"
+               [style.background-image]="'url(https://www.w3schools.com/w3images/avatar2.png)'"></div>
+          <div fxLayout="column" fxLayoutGap="25px" fxFlexOffset="10px" fxLayoutAlign="center start">
+            <mat-card-title>Full Name</mat-card-title>
+            <mat-card-subtitle>Room Number</mat-card-subtitle>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content>
+
+          <mat-accordion class="example-headers-align">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Details
+                </mat-panel-title>
+                <mat-panel-description>
+                  Tenant Details
+                  <mat-icon>account_circle</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <div>                
+                <strong>User name: </strong> ally
+                <br>
+                <strong>E-mail: </strong> 60234@unimas.my
+                <br>
+                <strong>Room Type </strong> Single
+              </div>
+          
+              <!-- <mat-form-field>
+                <mat-label>First name</mat-label>
+                <input matInput>
+              </mat-form-field>
+          
+              <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input matInput type="number" min="1">
+              </mat-form-field> -->
+              <mat-action-row>
+                <button mat-button color="primary" (click)="nextStep()">Update Profile</button>
+              </mat-action-row>
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Payments Details
+                </mat-panel-title>
+                <mat-panel-description>
+                  Payment Details of your room.
+                  <mat-icon>payment</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <div>                
+                <strong>Total(RM) </strong> 250
+                <br>
+                <strong>Total Outstanding(RM) </strong> None
+                <br>
+                <strong>Status </strong> Paid
+              </div>
+          
+              <mat-action-row>
+                <!-- <button mat-button color="warn" (click)="prevStep()">Previous</button> -->
+                <button mat-button color="primary" (click)="nextStep()" routerLink="/tenant-payment">Submit Payment</button>
+              </mat-action-row>
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Customer Service and Complaint
+                </mat-panel-title>
+                <mat-panel-description>
+                  Complaint/Feedback
+                  <mat-icon>insert_comment</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Complaint</mat-label>
+                <textarea matInput rows="3" cols="30" placeholder="What are your worries?"></textarea>
+              </mat-form-field>    
+          
+              <!-- <mat-form-field>
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+              </mat-form-field>
+              <mat-datepicker #picker></mat-datepicker> -->
+          
+              <mat-action-row>
+                <!-- <button mat-button color="warn" (click)="prevStep()">Previous</button> -->
+                <button mat-button color="primary" (click)="nextStep()">Make a report or complaint</button>
+              </mat-action-row>
+            </mat-expansion-panel>
+          
+          </mat-accordion>
+          <br>
+          <!-- <div>
+            
+              
+            <div  fxLayout="row" fxFlexFill>
+              <button mat-icon-button>
+                <mat-icon class="topMenu">edit</mat-icon>
+              </button>
+     
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum lobortis feugiat. Sed justo sapien, malesuada at ultricies et, sollicitudin at turpis. Donec
+            </div>
+            <div >
+              <mat-form-field>
+              <textarea matInput placeholder=""></textarea>
+              </mat-form-field>
+            </div>
+          </div> -->
+        </mat-card-content>
+
+        <mat-card-actions><button mat-stroked-button color="primary" class="button" routerLink="/main_home">Back</button></mat-card-actions>
+
+      </mat-card>
+
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,41 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+    <br>
+    <!-- field form for username and password -->
+    <form class="example-form" [formGroup]="addForm" (ngSubmit)="(addForm)" autocomplete="off">
+      <mat-card-content>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput name="email" class="form-control" formControlName="email"  autocomplete="off">
+              <!-- <mat-error *ngIf="emp.email.invalid">Email is required</mat-error> -->
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" type="password" class="form-control"
+          formControlName="password" id="pwd" autocomplete="off" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+          </button>
+        </mat-form-field>
+
+      </mat-card-content>
+      <button mat-stroked-button color="primary" class="btn-block"(click)="onSubmit()" >Log in</button>
+    </form>
+    <!-- [disabled]="!loginForm.valid" -->
+    <br>
+    <div class="signup">
+      <a routerLink="/signup_tenant">Not a Sign-Up yet? Sign-Up here!</a>
+      <br>
+      <a (click)="openDialog()"><u>Forgot Password</u></a>
+    </div>
+  </mat-card>
+
+    
+</div>

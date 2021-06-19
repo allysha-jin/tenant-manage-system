@@ -1,0 +1,31 @@
+<div class="background" fxFlexFill>
+    <!-- content -->
+    <div class="content" >
+      <div class="container">
+        <br>
+        <h1>TENANT MANAGEMENT SYSTEM</h1>
+        <a>Welcome to Tenant Management System where you to find your information regarding you room.</a>
+        <br>
+        <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10" fxLayoutAlign="center">
+            
+            <mat-card routerLink="/tenant-payment" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 2 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-title >Payments and Bills</mat-card-title>
+            </mat-card>
+          
+            <mat-card routerLink="/tenant-complaint" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 2 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-title >Complaint Report</mat-card-title>
+            </mat-card>
+
+        </div>
+
+        <div class="button">
+            <button mat-stroked-button color="primary" routerLink="/main_home" style="background: white;">Back</button>
+        </div>
+        <br>
+      </div>
+      
+    </div>
+
+  </div>

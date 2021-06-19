@@ -1,0 +1,75 @@
+<div style="height:100%;width: 100%; overflow: scroll; overflow-x: hidden;" fxFlexFill>
+  <!-- header -->
+  <mat-toolbar color="primary" class="header">
+
+    <mat-toolbar-row >
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span routerLink="./home" >Tenant Management System</span>
+      <span class="menu-spacer"></span>
+
+      <div fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <button routerLink="../booking" mat-button>Rooms</button>
+        <button routerLink="./about_us" mat-button>About Us</button>
+        <button mat-button [matMenuTriggerFor]="login">Login/Signup</button>
+        <button mat-button *ngIf="token" (click)="logOut()">Logout</button>
+                
+        <mat-menu #login="matMenu">
+          <button mat-menu-item ="Tenant" routerLink="./login_tenant" >Tenant</button>
+          <button mat-menu-item ="Admin" routerLink="./login_admin">Admin</button>
+        </mat-menu>
+        
+      </div>
+
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+  <!-- sidenav -->
+  <mat-sidenav-container fxFlexFill>
+
+    <mat-sidenav #sidenav>
+      <div class="my-2" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <div class="with-bg"></div>
+      </div>
+
+      <div  class="mt-2 py-3 text-white" fxLayout="column" fxLayoutAlign="center center"
+        fxLayoutGap="7px">
+      </div>
+
+      <div class="mt-3">
+        <mat-nav-list>
+          <mat-list-item class="ml-2" style="font-size:15px;" routerLink="">Rooms</mat-list-item>
+        </mat-nav-list>
+  
+        <mat-nav-list>
+          <mat-list-item class="ml-2" style="font-size:15px;" routerLink="./about_us">About Us</mat-list-item>
+        </mat-nav-list>
+  
+        <mat-expansion-panel class="no-shadow">
+
+          <mat-expansion-panel-header fxLayout="row">
+            <mat-panel-title>Login/SignUp</mat-panel-title>
+          </mat-expansion-panel-header>
+
+            <mat-nav-list class="ml-12" style="font-size:15px;">
+              <mat-list-item class="ml-12" style="font-size:15px;" routerLink="./login_tenant">Tenant</mat-list-item>
+              <mat-list-item class="ml-12" style="font-size:15px;" routerLink="./login_admin">Admin</mat-list-item>
+              <!-- <mat-list-item class="ml-12" style="font-size:15px;" routerLink ="./CheckAsset">Check Asset</mat-list-item>
+              <mat-list-item class="ml-12" style="font-size:15px;" routerLink="./BorrowAsset">Borrow Asset</mat-list-item>
+              <mat-list-item class="ml-12" style="font-size:15px;" routerLink="./RepairAsset">Repair Asset</mat-list-item> -->
+            </mat-nav-list>
+
+        </mat-expansion-panel>
+      </div>
+
+    </mat-sidenav>
+
+    <!-- content -->
+    <mat-sidenav-content fxFlexFill >
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

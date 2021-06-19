@@ -1,0 +1,18 @@
+.stepper{
+    display: block; 
+    align-items: center; 
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+    width: 70%;
+    display: block; 
+    align-items: center; 
+    justify-content: center;
+    margin: 15px auto;
+    height: 90%;
+  }
+
+ 

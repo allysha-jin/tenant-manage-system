@@ -1,0 +1,80 @@
+.background{
+    width:100%;
+    
+  
+}
+
+.content{
+    display: block; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin: 15em auto;
+    text-shadow: rgb(148, 146, 146) 10px 5px 10px;
+
+    
+}
+
+.container{
+  background-color:rgba(224, 220, 220, 0.897);
+  border-radius: 20px;
+  width:900px;
+  height: auto;
+  margin: 0 auto;
+  
+}
+
+h1{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+a{
+  font-size: medium;
+}
+
+.title{
+    margin: auto;
+    text-align: center;
+  
+}
+
+.cat{
+    margin: auto;
+    text-align: center;
+    
+}
+
+mat-card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    align-items: center;
+    transition: 1s;
+
+  }
+
+mat-card:hover{
+    cursor: pointer;
+    background-color: rgb(238, 253, 251);
+    opacity: 0.8;
+}
+
+.card{
+    margin: auto;
+    display: inline-flex;
+}
+  
+  .mr-10 {
+    margin-right: 10px;
+  }
+  
+  .ml-10 {
+    margin-left: 10px;
+  } 
+
+  h3{
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+  }

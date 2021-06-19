@@ -1,0 +1,37 @@
+<div class="stepper" fxFlex>
+  <mat-horizontal-stepper #stepper>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel>Payment Details</ng-template>
+
+          <br>Room ID:
+          <br>Room Type:
+          <br>Total (RM)
+          <br>Total outstanding (RM):
+          <br>Status:
+          <br>
+
+          <button mat-stroked-button color="primary" matStepperNext>Proceed</button>
+      </form>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Submit Payment</ng-template>
+      <h2>Upload your receipt of monthly rental payment.</h2>
+      <input mat-stroked-button color="primary"type="file">
+      <br>
+      <br>
+      <button mat-stroked-button color="primary" matStepperNext (click)="upload()">UPLOAD</button>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+        <h3> Make sure the details are correct before submmiting. </h3>
+      <div>
+        <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+        <button mat-stroked-button color="primary" routerLink="/main_home" >Confirm</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+</div>

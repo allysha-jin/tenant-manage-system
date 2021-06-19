@@ -1,0 +1,191 @@
+<div class="container" >
+  <br>
+  <h1>Booking Room</h1>
+
+  <div class="form-group">
+    <strong>Room Type</strong>
+    <select class="form-control" [(ngModel)]="roomtype">
+      <option></option>      
+      <option value="single">Single</option>
+      <option value="double">Double</option>
+    </select>
+  </div>
+
+  <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10" style="height: 90%;">
+    <div class="container"><br/>
+
+    <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-card-title>Room 1</mat-card-title>
+      <img mat-card-image src="https://www.w3schools.com/w3images/livingroom.jpg" class="image">
+      <mat-card-content> <div class="w3-container">
+        <h4><strong>The space</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col ">
+            <p><i class="fa fa-fw fa-male"></i> Max people:1</p>
+            <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+            <p><i class="fa fa-fw fa-bed"></i> Single</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Amenities</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+            <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>        
+            <p><i class="fa fa-fw fa-tv"></i> TV</p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+            <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+            <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Extra Info</strong></h4>
+        <p>Our apartment is really clean and we like to keep it that way.</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
+        <hr>
+        
+        <h4><strong>Rules</strong></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><b>Sign-up to continue your booking with us.</b></p>
+        
+      </div>
+      </mat-card-content>
+      <mat-card-actions><button mat-raised-button color="primary" (click)="openDialog()">Book Now</button></mat-card-actions>
+    </mat-card>
+    
+    <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-card-title>Room 2</mat-card-title>
+      <img mat-card-image src="https://www.w3schools.com/w3images/livingroom.jpg" class="image">
+      <mat-card-content> <div class="w3-container">
+        <h4><strong>The space</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col ">
+            <p><i class="fa fa-fw fa-male"></i> Max people:1</p>
+            <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+            <p><i class="fa fa-fw fa-bed"></i> Single</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Amenities</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+            <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+            <p><i class="fa fa-fw fa-tv"></i> TV</p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+            <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+            <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Extra Info</strong></h4>
+        <p>Our apartment is really clean and we like to keep it that way.</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
+        <hr>
+        
+        <h4><strong>Rules</strong></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><b>Sign-up to continue your booking with us.</b></p>
+        
+      </div></mat-card-content>
+      <mat-card-actions><button mat-raised-button color="primary" (click)="openDialog()">Book Now</button></mat-card-actions>
+    </mat-card>
+
+    <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-card-title>Room 3</mat-card-title>
+      <img mat-card-image src="https://www.w3schools.com/w3images/livingroom.jpg" class="image">
+      <mat-card-content> <div class="w3-container">
+        <h4><strong>The space</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col ">
+            <p><i class="fa fa-fw fa-male"></i> Max people:1</p>
+            <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+            <p><i class="fa fa-fw fa-bed"></i> Single</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Amenities</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+            <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+            <p><i class="fa fa-fw fa-tv"></i> TV</p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+            <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+            <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Extra Info</strong></h4>
+        <p>Our apartment is really clean and we like to keep it that way.</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
+        <hr>
+        
+        <h4><strong>Rules</strong></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><b>Sign-up to continue your booking with us.</b></p>
+        
+      </div></mat-card-content>
+      <mat-card-actions><button mat-raised-button color="primary" (click)="openDialog()">Book Now</button></mat-card-actions>
+    </mat-card>
+
+    <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-card-title>Room1</mat-card-title>
+      <img mat-card-image src="https://www.w3schools.com/w3images/livingroom.jpg" class="image">
+      <mat-card-content> <div class="w3-container">
+        <h4><strong>The space</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col">
+            <p><i class="fa fa-fw fa-male"></i> Max people:1</p>
+            <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+            <p><i class="fa fa-fw fa-bed"></i> Single</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Amenities</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+            <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+            <p><i class="fa fa-fw fa-tv"></i> TV</p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+            <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+            <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+          </div>
+        </div>
+        <hr>
+        
+        <h4><strong>Extra Info</strong></h4>
+        <p>Our apartment is really clean and we like to keep it that way.</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
+        <hr>
+        
+        <h4><strong>Rules</strong></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><b>Sign-up to continue your booking with us.</b></p>
+        
+      </div>
+      </mat-card-content>
+
+      <mat-card-actions><button mat-raised-button color="primary" (click)="openDialog()">Book Now</button></mat-card-actions>
+
+    </mat-card>
+
+  </div>
+
+</div>

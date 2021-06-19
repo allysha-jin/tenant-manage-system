@@ -1,0 +1,41 @@
+
+
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Complaint Form</mat-card-title>
+      </mat-card-header>
+      <br>
+      <!-- field form for username and password 
+      [formGroup]="" (ngSubmit)="" novalidate-->
+      <form class="example-form" >
+        <mat-card-content>
+  
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Complaint</mat-label>
+            <textarea matInput rows="3" cols="30" placeholder="What are your worries?"></textarea>
+          </mat-form-field>
+  
+        </mat-card-content>
+        <button mat-stroked-button color="primary" class="btn-block" routerLink="/main_home" >SENDS</button>
+        <br>
+        <div class="signup">
+            <a>We will email your if your complaint has been received.</a>
+            <br>
+          </div>
+      </form>
+
+    </mat-card>
+  
+  </div>
+  
+  <!-- <pre>
+  {{loginForm.value | json }}
+  </pre> -->
